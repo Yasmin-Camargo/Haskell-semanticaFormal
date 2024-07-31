@@ -45,12 +45,15 @@ quantosSaoIguais2 a b c
 
 -- 6. Defina a fun¸c˜ao elevadoDois :: Int -> Int que recebe um argumento n
 -- e devolve como resposta n2
+elevadoDois :: Int -> Int
+elevadoDois n = n * n
 
 
 -- 7. Defina a fun¸c˜ao elevadoQuatro :: Int -> Int que recebe um argumento
 -- n e devolve como resposta n^4
 -- . Use elevadoDois para definir elevadoQuatro
-
+elevadoQuatro :: Int -> Int
+elevadoQuatro n = (elevadoDois n) * (elevadoDois n)
 
 -- 8. Supondo que exista uma fun¸c˜ao vendas:
 -- vendas :: Int -> Int
@@ -61,3 +64,13 @@ quantosSaoIguais2 a b c
 -- ser recursiva. Exemplo de calculo: As vendas da semana 0 at´e a semana 2,
 -- podem ser calculados usando a seguinte formula:
 -- vendas 0 + vendas 1 + vendas 2
+vendas :: Int -> Int
+vendas 0 = 100
+vendas 1 = 150
+vendas 2 = 200
+vendas 3 = 250
+vendas _ = 0  
+
+vendaTotal :: Int -> Int
+vendaTotal 0 = vendas 0
+vendaTotal n = vendas n + vendaTotal (n - 1)
