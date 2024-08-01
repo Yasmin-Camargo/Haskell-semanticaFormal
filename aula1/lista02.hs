@@ -43,7 +43,7 @@ quantosSaoIguais2 a b c
     | (todosIguais a b c) == True = 3
     | otherwise = 2
 
--- 6. Defina a fun¸c˜ao elevadoDois :: Int -> Int que recebe um argumento n
+-- 6. Defina a fun¸cao elevadoDois :: Int -> Int que recebe um argumento n
 -- e devolve como resposta n2
 elevadoDois :: Int -> Int
 elevadoDois n = n * n
